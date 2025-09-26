@@ -36,17 +36,30 @@ public class GuessTheNumberOop {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        // Object Created :-
-        Game game = new Game();
 
-        boolean b = false;
-        // Game Initializing :-
-        while (!b) {
+        boolean c = false;
 
-            game.Guess();
-            b = game.isCorrect();
-            // game.Repeat();
+        while (!c) { // True for continuing the Game After Another
+            // Object Created :-
+            Game game = new Game();
+            boolean b = false;
+            // Game Initializing :-
 
+            while (!b) { // This while loop is used to take multiple guessed/inputs from user
+
+                game.Guess();
+                b = game.isCorrect();
+                // game.Repeat();
+
+            }
+            System.out.println(" Do You Want to Play Again? (yes/no) : ");
+            String str = sc.next().toLowerCase();
+            if (str.equalsIgnoreCase("no")) {
+                System.out.println("Thanks for Playing Game... BYE..!!");
+                c = true;
+            } else {
+                c = false; // Not needed though to write c = false ==
+            }
         }
 
     }
