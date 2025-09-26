@@ -54,7 +54,7 @@ public class InheritanceWconstructor {
     public static void main(String[] args) {
         // Base1 bass = new Base1();
         // Dervied1 derv = new Dervied1();
-        GrandChild gc = new GrandChild(5, 4, 6);
+        GrandChild gc = new GrandChild(4, 5,6);
 
         // Q) Create a Class Animal And Derive A Class Dog From It
         // NOTE :- The Constructor of The Base Class Will Be Executed FIrst & THen The
