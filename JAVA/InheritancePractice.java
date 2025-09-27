@@ -19,7 +19,7 @@ class Circle11 {
 class Cylinder11 extends Circle11 {
     int height;
 
-    public double Height() {
+    public double Volume() {
         return Math.PI * this.radius * this.radius * height;
     }
 
@@ -39,6 +39,6 @@ public class InheritancePractice {
         // from it
         // Circle11 c1 = new Circle11(5);
         Cylinder11 cyl = new Cylinder11(5, 5);
-
+        System.out.println(cyl.Volume());
     }
 }
