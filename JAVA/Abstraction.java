@@ -1,5 +1,7 @@
 // Made Class Parent as abstract because There is a Abstract method in this Class
 // Note:- If We Make a Abstract Method in any class then this class becomes an Abstract Class
+// Note:- An Abstract class is used to Create a Concrete class
+// Note :- Object of the Abstract class Cannot be Created
 
 abstract class Parentt {
     Parentt() {
