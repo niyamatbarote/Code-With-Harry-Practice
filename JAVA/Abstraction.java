@@ -15,6 +15,8 @@ class Child1 extends Parentt {
         System.out.println("Im Constructor of Class Chhild");
     }
 
+    // If we Dont Add The abstract method from that inherited abstract class then it
+    // will give error
     @Override
     public void greet() {
         System.out.println("Good Morning");
@@ -22,12 +24,10 @@ class Child1 extends Parentt {
 }
 
 abstract class Child3 extends Parentt {
-   public void NoGreet(){
-    System.out.println("Helllo Bhaiiiii BOl ");
-   }
+    public void NoGreet() {
+        System.out.println("Helllo Bhaiiiii BOl ");
+    }
 }
-
-
 
 public class Abstraction {
     public static void main(String[] args) {
