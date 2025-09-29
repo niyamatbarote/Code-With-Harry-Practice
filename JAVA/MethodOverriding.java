@@ -1,10 +1,10 @@
-class Parentt {
-    public void Method1() {         // Same Method
+class Parentt12 {
+    public void Method1() { // Same Method
         System.out.println("Im Method 1 of Class Parent");
     }
 }
 
-class Childd extends Parentt {
+class Childd12 extends Parentt12 {
     // Method Overriding
     @Override
     public void Method1() {
@@ -14,9 +14,11 @@ class Childd extends Parentt {
 
 public class MethodOverriding {
     public static void main(String[] args) {
-        Childd cd = new Childd();
+        Childd12 cd = new Childd12();
+        Parentt12 pttt = new Parentt12();
 
         // Calling Method
         cd.Method1();
+        pttt.Method1();
     }
 }
