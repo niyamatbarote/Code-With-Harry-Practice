@@ -1,3 +1,5 @@
+// Note:- We Can Inherit the Interfaces
+
 interface ParentInterface{
     void Meth1();
     void Meth2();
