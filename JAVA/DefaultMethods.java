@@ -8,6 +8,7 @@ interface Camera {
         System.out.println("Good Morning");
     }
 
+    // Greet Can be run thrugh Private
     default void record4kVid() {
         greet();// Greet can be run through default method(?)...
         System.out.println("Recording in 4k...");
@@ -34,11 +35,12 @@ class Cellphone {
     }
 }
 
+// Implementing Multiple interfaces , Multiple Inheritance can Be Achieved
 class Smartphone1 extends Cellphone implements Wifi, Camera {
 
     // #========= Even if not in main classs. interfernce class and greet is
     // implemented =====#
-    // public void record4kVid(){       // This will override the method
+    // public void record4kVid(){ // This will override the method
     // System.out.println("Record in 4k");
     // }
     public void takeSnap() {
@@ -70,7 +72,7 @@ public class DefaultMethods {
         for (String elements : ar) {
             System.out.println(elements);
         }
-        // sp.greet(); --> Throws error!
+        // sp.greet(); //--> Throws error!
         sp.record4kVid();
 
     }
