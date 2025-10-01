@@ -139,9 +139,15 @@ public class Interface_Abstract_Practice {
 
 // Q) Demonstrate Polymorphosm Using Monkey Class.
 
-        BasicAnimal ba = new Human();
-        ba.Eat();
-        ba.Sleep();
+        // BasicAnimal ba = new Human();
+        // ba.Eat();
+        // ba.Sleep();
+
+        Monkey m1 = new Human();
+        m1.Bite();
+        m1.jump();
+        // // m1.Eat();  -->> Throws Error
+
 
         
 
