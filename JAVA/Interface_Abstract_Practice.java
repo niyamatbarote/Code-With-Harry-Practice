@@ -122,22 +122,28 @@ public class Interface_Abstract_Practice {
 // Q) Create a Class "Telephone" with Ring(),Answer() & Disconnect() Methods as Abstract MEthods .
 // Create another class SmartTelephone & Demonstrate Polymorphism.
 
-        SmartTelephone stp = new SmartTelephone();
-        stp.Ring();
-        Record rd = new SmartTelephone();
-        Timeline tml = new SmartTelephone();
+        // SmartTelephone stp = new SmartTelephone();
+        // stp.Ring();
+        // Record rd = new SmartTelephone();
+        // Timeline tml = new SmartTelephone();
 
-        rd.RecordVoice();
-        rd.VoiceTimestamp();
-        // rd.TimeStamp();   --> Throws Error Bcoz "Not int the Method of (Record)"
-        // rd.SaveTime();    --> Throws Error Bcoz "Not int the Method of (Record)"
-        tml.Timestamp();
-        tml.SaveTime();
-        // tml.RecordVoice();      --> Throws Error Bcoz "Not int the Method of (Record)"
-        // tml.VoiceTimestamp();   --> Throws Error Bcoz "Not int the Method of (Record)"
+        // rd.RecordVoice();
+        // rd.VoiceTimestamp();
+        // // rd.TimeStamp();   --> Throws Error Bcoz "Not int the Method of (Record)"
+        // // rd.SaveTime();    --> Throws Error Bcoz "Not int the Method of (Record)"
+        // tml.Timestamp();
+        // tml.SaveTime();
+        // // tml.RecordVoice();      --> Throws Error Bcoz "Not int the Method of (Record)"
+        // // tml.VoiceTimestamp();   --> Throws Error Bcoz "Not int the Method of (Record)"
 
 
+// Q) Demonstrate Polymorphosm Using Monkey Class.
 
+        BasicAnimal ba = new Human();
+        ba.Eat();
+        ba.Sleep();
+
+        
 
 
     }
