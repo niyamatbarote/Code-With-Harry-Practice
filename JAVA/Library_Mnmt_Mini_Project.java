@@ -65,9 +65,12 @@ public class Library_Mnmt_Mini_Project {
         myLibrary.AddBook("Breaking Bad");
         myLibrary.AddBook("Python");
         myLibrary.AddBook("JavaScript");
+
         myLibrary.ShowAvailableBooks();
+        
         myLibrary.IssueBooks("C++");
         myLibrary.ShowAvailableBooks();
+        
         myLibrary.returnBook("C++");
         myLibrary.ShowAvailableBooks();
 
