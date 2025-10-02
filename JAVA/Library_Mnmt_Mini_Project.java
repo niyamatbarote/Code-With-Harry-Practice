@@ -27,7 +27,7 @@ class Library{
     public void IssueBooks(String book){
         System.out.println("Checking For Availability of Books ");
         for (int i = 0; i < LibBooks.length; i++) {
-            if (LibBooks[i]!=null && LibBooks[i].equalsIgnoreCase(book)) {
+            if (LibBooks[i] != null && LibBooks[i].equalsIgnoreCase(book)) {
                 System.out.println("Book Available & ISSUED >>");
                 LibBooks[i]=null;
                 return;
