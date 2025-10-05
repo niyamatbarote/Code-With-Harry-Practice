@@ -8,6 +8,13 @@ class Hellw extends Thread{
             
         System.out.println("Thank YOuu..XYZ!!");
             i++;
+// This "sleep" Method will help us to stop/sleep this thread for here(50) miilliseconds            
+            try {
+                Thread.sleep(50);
+            } catch (Exception e) {
+                // TODO: handle exception
+                System.out.println(e);
+            }
         }
     }
 
@@ -30,12 +37,12 @@ public class Threads_Methods {
 
         h1.start();
 
-        try {
-            h1.join();  // THIS METHOD WILL HELP TO CONTINUE PRINTING "h1" TILL ITS COMPLETION
-        } catch (Exception e) {
-            // TODO: handle exception
-            System.out.println(e);
-        }
+        // try {
+        //     h1.join();  // THIS METHOD WILL HELP TO CONTINUE PRINTING "h1" TILL ITS COMPLETION
+        // } catch (Exception e) {
+        //     // TODO: handle exception
+        //     System.out.println(e);
+        // }
 
         h2.start();
     }
