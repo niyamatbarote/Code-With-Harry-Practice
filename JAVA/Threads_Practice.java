@@ -80,7 +80,5 @@ public class Threads_Practice {
 
         System.out.println(Thread.currentThread().getState());
 
-
-
     }
 }
