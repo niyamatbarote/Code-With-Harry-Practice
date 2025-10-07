@@ -1,24 +1,6 @@
 import java.util.Scanner;
 
 class TakeInput{
-<<<<<<< HEAD
-    int i;
-    Scanner sc = new Scanner(System.in);
-    public void TakeInput1(){
-        System.out.println("Enter The Number: ");
-        
-        i = sc.nextInt();
-    }
-    public void CheckPrime(){
-        if (this.i==2 || this.i==3) {
-            System.out.println("Its Not PRIME NUMBER ");
-        }
-        else if( this.i%2==0  || this.i%3==0){
-            System.out.println("Its Not Prime Number");
-        }else{
-            System.out.println("It is PRIME NUMBER");
-        }
-=======
     
     
     public static boolean isPrime(int n){
@@ -43,18 +25,10 @@ class TakeInput{
             }
         }
         return true;
->>>>>>> ce4c3c5 (1 Commit)
     }
 }
 
 public class PrimeNum {
-<<<<<<< HEAD
-    public static void main(String[] args) {
-        TakeInput tk = new TakeInput();
-
-        tk.TakeInput1();
-        tk.CheckPrime();
-=======
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -67,6 +41,5 @@ public class PrimeNum {
             System.out.println("Not Prime Number");
         }
 
->>>>>>> ce4c3c5 (1 Commit)
     }
 }
