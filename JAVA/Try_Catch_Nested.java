@@ -19,17 +19,16 @@ public class Try_Catch_Nested {
         System.out.println("Enter The Index Number : ");
         int index = sc.nextInt();
         try {
-   
             try {
-                System.out.println(arr[index]);
+            System.out.println(arr[index]);
                 isTrue = false;
             } catch (ArrayIndexOutOfBoundsException e) {
                 // TODO: handle exception
                 System.out.println("Index Out Of Bound Error.. Choose Other Index");
             }
-        } catch (Exception e) {
+        } catch (ArrayIndexOutOfBoundsException e) {
             // TODO: handle exception
-            System.out.println("Some Unknown Error");
+            System.out.println("ArrayIndexOutOfBoundsException");
         }
     }
     }
