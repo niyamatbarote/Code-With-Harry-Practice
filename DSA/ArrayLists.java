@@ -55,7 +55,7 @@ public class ArrayLists {
 //             System.out.print(list.get(i)+ " ");    // Element at index will be Printed
 //         }
 //         System.out.println();
-//         System.out.println(list);                   // ArrayList Will Be Printed
+//         System.out.println(list);                   // ArrayList Will Be Printed....
 
 
 
