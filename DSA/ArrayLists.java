@@ -18,7 +18,7 @@ public class ArrayLists {
 
 
 
-//         // Input in ArrayList
+//         // Input in ArrayList done
 //         list.add(3);
 //         list.add(64);
 //         list.add(65);
