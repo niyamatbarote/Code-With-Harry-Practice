@@ -28,7 +28,7 @@ public class ArrayLists {
 //         list.add(6);
 //         list.add(5);
         
-// // Output of ARRAYLIST: -
+// // Output of ARRAYLIST: 
 //         System.out.println(list);
 //         System.out.println("Element At Index 0: "+list.get(0));
 //         System.out.println("Element At Index 5: "+list.get(5));
