@@ -37,7 +37,7 @@ public class ArrayLists {
 //         System.out.println("Replaced Element is: "+list.set(1, 69)+" At Index  1 by 69");
 //         System.out.println(list.contains(88));      // check if element is present
 //         System.out.println(list.contains(5));
-// Printing arraylist:-
+// // Printing arraylist:-
 //         System.out.println(list);
 
 
