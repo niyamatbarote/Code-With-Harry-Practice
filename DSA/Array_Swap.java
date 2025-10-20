@@ -34,7 +34,14 @@ public class Array_Swap {
         System.out.println("Minimum From This Arrya is: "+min);
     }
 
-    
+    // Method to Reverse an Arrya:-
+    static void reverseArray(int[] arr){
+        for (int i = arr.length-1; i >= 0; i--) {
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println();
+    }
+
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -43,7 +50,7 @@ public class Array_Swap {
         swap(arr, 0, 4);
         swap(arr, 1, 3);
         System.out.println(Arrays.toString(arr));
-
+        
         getMax(arr);
 
 // ===========================================================================================================//
@@ -76,5 +83,7 @@ public class Array_Swap {
 
         getMax(myArray);
         getMin(myArray);
+        reverseArray(myArray);
+        reverseArray(arr);
     }
 }
