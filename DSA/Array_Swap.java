@@ -42,6 +42,19 @@ public class Array_Swap {
         System.out.println();
     }
 
+    // Reverse USing Swapping Method:-
+    static void revSwap(int[] arr){
+        int start = 0;
+        int end = arr.length-1;
+        while (start<end) {
+            swap(arr, start, end);
+            start++;
+            end--;
+        }
+
+    }
+
+
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -59,31 +72,32 @@ public class Array_Swap {
 
 
         // Getting Lenght of an array:
-        System.out.println("Enter the length of an Array: ");
-        int n = sc.nextInt();
+        // System.out.println("Enter the length of an Array: ");
+        // int n = sc.nextInt();
 
-        int[] myArray = new int[n];
+        // int[] myArray = new int[n];
         
-        // Input in Array:-
-        System.out.println("Enter "+n+ " Elements in Array: ");
-        for (int i = 0; i < myArray.length; i++) {
-            myArray[i]=sc.nextInt();
-        }
+        // // Input in Array:-
+        // System.out.println("Enter "+n+ " Elements in Array: ");
+        // for (int i = 0; i < myArray.length; i++) {
+        //     myArray[i]=sc.nextInt();
+        // }
         
-        // Printing Array:-
-        System.out.println("Your Array Is: "+Arrays.toString(myArray));
+        // // Printing Array:-
+        // System.out.println("Your Array Is: "+Arrays.toString(myArray));
 
-        // Reversing Array:-
-        System.out.println("Reversed Array Would Be: ");
-        for (int i = n-1; i >= 0; i--) {
-            System.out.print(+myArray[i]+" ");
-        }
+        // // Reversing Array:-
+        // System.out.println("Reversed Array Would Be: ");
+        // for (int i = n-1; i >= 0; i--) {
+        //     System.out.print(+myArray[i]+" ");
+        // }
 
 // ==============================================================================================================
 
-        getMax(myArray);
-        getMin(myArray);
-        reverseArray(myArray);
+        getMax(arr);
+        getMin(arr);
         reverseArray(arr);
+        reverseArray(arr);
+        revSwap(arr);
     }
 }
