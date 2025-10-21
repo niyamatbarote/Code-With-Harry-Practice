@@ -19,24 +19,7 @@ public class Linearsearch {
 
     }
 
-    // Search in Range:-
-    static void searchRange(int[] arr,int target, int start, int end){
-        boolean found = false;
-        if (arr.length == 0) {
-            System.out.println("Null Array");
-        }
-
-        for (int i = start; i <= end; i++) {
-            if (arr[i]==target) {
-                System.out.println("Target Found at Index: "+i);
-                found=true;
-            }
-        }
-        if (!found) {
-                System.out.println("Target Not Found");  
-            }
-    }
-
+    // Searching in String
     static boolean searchStr(String str, char target){
         if (str.length() == 0) {
             return false;
@@ -66,6 +49,56 @@ public class Linearsearch {
          return false;
     }
 
+    // Search in Range:-
+    static void searchRange(int[] arr,int target, int start, int end){
+        boolean found = false;
+        if (arr.length == 0) {
+            System.out.println("Null Array");
+        }
+
+        for (int i = start; i <= end; i++) {
+            if (arr[i]==target) {
+                System.out.println("Target Found at Index: "+i);
+                found=true;
+            }
+        }
+        if (!found) {
+                System.out.println("Target Not Found");  
+            }
+    }
+
+    // Searching MINIMUM in Range:-
+    static void minSearch(int[] arr, int start, int end){
+        int min=Integer.MAX_VALUE;
+
+        if (arr.length==0) {
+            System.out.println("Null Array.!!");
+        }
+
+        for (int i = start; i <= end; i++) {
+            if (arr[i]<min) {
+                min = arr[i];
+            }
+        }
+        System.out.println("Minimum Element in Range "+start+" to "+end+" is: "+min);
+    }
+    
+    // Searching MINIMUM in Range:-
+    static void maxSearch(int[] arr, int start, int end){
+        int min=Integer.MIN_VALUE;
+
+        if (arr.length==0) {
+            System.out.println("Null Array.!!");
+        }
+
+        for (int i = start; i <= end; i++) {
+            if (arr[i]>min) {
+                min = arr[i];
+            }
+        }
+        System.out.println("Minimum Element in Range "+start+" to "+end+" is: "+min);
+    }
+
     public static void main(String[] args) {
         
         int[] arr = {4,2,32,54,56,23,67,86,45,43,23,12};
@@ -76,6 +109,8 @@ public class Linearsearch {
         System.out.println(searchStr2(str, 'a'));
         System.out.println(Arrays.toString(str.toCharArray()));
         searchRange(arr, 25, 1, 5);
+        minSearch(arr, 5, 10);
+        maxSearch(arr, 5, 10);
 
     }
 }
