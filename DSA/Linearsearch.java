@@ -1,5 +1,7 @@
 package DSA;
 
+import java.util.Arrays;
+
 public class Linearsearch {
 
     static int linearSearch(int[] arr, int target){
@@ -15,6 +17,24 @@ public class Linearsearch {
         }
         return -1;
 
+    }
+
+    // Search in Range:-
+    static void searchRange(int[] arr,int target, int start, int end){
+        boolean found = false;
+        if (arr.length == 0) {
+            System.out.println("Null Array");
+        }
+
+        for (int i = start; i <= end; i++) {
+            if (arr[i]==target) {
+                System.out.println("Target Found at Index: "+i);
+                found=true;
+            }
+        }
+        if (!found) {
+                System.out.println("Target Not Found");  
+            }
     }
 
     static boolean searchStr(String str, char target){
@@ -54,6 +74,8 @@ public class Linearsearch {
         System.out.println("The Target is at Index: "+linearSearch(arr, 86));
         System.out.println(searchStr(str, 'y'));
         System.out.println(searchStr2(str, 'a'));
+        System.out.println(Arrays.toString(str.toCharArray()));
+        searchRange(arr, 25, 1, 5);
 
     }
 }
