@@ -99,18 +99,47 @@ public class Linearsearch {
         System.out.println("Minimum Element in Range "+start+" to "+end+" is: "+min);
     }
 
+    // Searching in 2D Array:-
+    static int[] searchArray(int[][] arr, int target){
+        if (arr.length== 0) {
+            return new int[]{-1,-1};
+        }
+
+        for (int r = 0; r < arr.length; r++) {
+            for (int c = 0; c < arr[r].length; c++) {
+                if (arr[r][c]==target) {
+                    return new int[]{r,c};
+                }
+            }
+        }
+        return new int[]{-1,-1};
+
+    }
+
     public static void main(String[] args) {
         
         int[] arr = {4,2,32,54,56,23,67,86,45,43,23,12};
+        int [][] array= new int[][] {
+            {3,5,7,1},
+            {7,54,34},
+            {43,97,54,64,23,20},
+            {98,57}
+        };
         String str = "Niyamat";
 
-        System.out.println("The Target is at Index: "+linearSearch(arr, 86));
-        System.out.println(searchStr(str, 'y'));
-        System.out.println(searchStr2(str, 'a'));
-        System.out.println(Arrays.toString(str.toCharArray()));
-        searchRange(arr, 25, 1, 5);
-        minSearch(arr, 5, 10);
-        maxSearch(arr, 5, 10);
+
+        // System.out.println("The Target is at Index: "+linearSearch(arr, 86));
+        // System.out.println(searchStr(str, 'y'));
+        // System.out.println(searchStr2(str, 'a'));
+        // System.out.println(Arrays.toString(str.toCharArray()));
+        // searchRange(arr, 25, 1, 5);
+        // minSearch(arr, 5, 10);
+        // maxSearch(arr, 5, 10);
+
+        // Searching in 2D Array:-
+        int[] ans = searchArray(array, 54); 
+        System.out.println(Arrays.toString(ans));
+
 
     }
 }
