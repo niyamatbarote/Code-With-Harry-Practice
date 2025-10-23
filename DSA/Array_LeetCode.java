@@ -56,8 +56,10 @@ public class Array_LeetCode {
     // https://leetcode.com/problems/find-numbers-with-even-number-of-digits/description/?envType=problem-list-v2&envId=vrww4tkr
     static int evenDigits(int[] arr) {
         int even = 0;
+
         for (int i = 0; i < arr.length; i++) {
             int count = 0;
+
             if (arr[i] == 0) {
                 count = 1;
             } else {
@@ -66,6 +68,7 @@ public class Array_LeetCode {
                     count++;
                 }
             }
+            
             if (count % 2 == 0) {
                 even++;
             }
