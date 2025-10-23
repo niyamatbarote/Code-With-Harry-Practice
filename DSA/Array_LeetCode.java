@@ -1,5 +1,7 @@
 package DSA;
 
+import java.util.Scanner;
+
 public class Array_LeetCode {
 
     // Find The Richest Customer Wealth Problem N0. --> 1672
@@ -22,12 +24,45 @@ public class Array_LeetCode {
         }
         return wealth;
     }
+
+    // // Digit Counter:-
+    // static void countDigit(int num){
+    //     int odd = 0;
+    //     int even = 0;
+    //     int count = 0;
+
+    //     if (num == 0) {
+    //         count =1;
+    //         System.out.println("It has only 1 Digit");
+    //     }else{
+    //         while (num!=0) {
+    //             num /= 10;
+    //             count ++;
+    //         }
+    //     }
+    //     System.out.println("This Number has "+count+" Digits");
+        
+    //     if (count == 1) {
+    //         System.out.println("THe Number is of ODD Digits");   
+    //     }
+    //     else if (count/2==0) {
+    //         System.out.println("The Number is of Even Digits");
+    //     }else{
+    //         System.out.println("The Number is of Odd Digits");
+    //     }
+    // }
+
+
+
+    // 
+
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         int [][] accounts = {
             {1,2,7},
             {3,2,1}
         };
         System.out.println(maxWealth(accounts));
-
+        
     }
 }
