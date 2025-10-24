@@ -89,8 +89,8 @@ public class BinarySearch {
         int[] arr = { 12, 14, 16, 18, 20, 23, 25, 27, 30, 32, 33, 35 };
         int[] arr1 = { 30, 29, 28, 27, 26, 20, 9, 8, 7, 6, 5, 4, };
 
-        // System.out.println(binarySearch(arr, 20));
-        // System.out.println(binarySearch1(arr1, 27));
+        System.out.println(binarySearch(arr, 20));
+        System.out.println(binarySearch1(arr1, 27));
         System.out.println(orderAgnosticBS(arr, 20));
         System.out.println(orderAgnosticBS(arr1, 27));
     }
