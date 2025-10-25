@@ -81,13 +81,33 @@ public class Binary_Search_LC {
     // return ceiling;
     // }
 
+    // 744. Find Smallest Letter Greater Than Target
+    // https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/?envType=problem-list-v2&envId=vrww4tkr
+    static char nextGreatChar(char[] arr, char target) {
+        int start = 0;
+        int end = arr.length - 1;
+
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+
+            if (arr[mid] > target) {
+                end = mid - 1;
+            } else {
+                start = mid + 1;
+            }
+        }
+        return arr[start % arr.length];
+    }
+
     public static void main(String[] args) {
+        char[] arr1 = { 'c', 'f', 'j' };
         int[] arr = { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 25, 30, 44, 90 };
         // Index----> 0, 1, 2, 3, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14
 
         // System.out.println(ceilingNumber(arr, 19));
         System.out.println(findPeakElement(arr, 91));
         System.out.println(floorNumber(arr, 1));
+        System.out.println(nextGreatChar(arr1, 'f'));
 
     }
 }
