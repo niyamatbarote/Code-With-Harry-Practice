@@ -97,7 +97,7 @@ public class Binary_Search_LC {
             }
         }
         return arr[start % arr.length];
-    }
+    };
 
     public static void main(String[] args) {
         char[] arr1 = { 'c', 'f', 'j' };
