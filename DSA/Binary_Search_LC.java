@@ -6,7 +6,7 @@ public class Binary_Search_LC {
 
     // Ceiling of a Number Problem (Using Binary Search)(Sorted Array):-
 
-    static int findPeakElement(int[] arr, int target) {
+    static int ceilingNumber(int[] arr, int target) {
 
         // What if There is No Ceiling of a Number:-
         if (target > arr[arr.length - 1]) {
@@ -189,11 +189,37 @@ public class Binary_Search_LC {
 
     // =====================================================================================================
 
+    // Q)162 PEAK INDEX
+    // https://leetcode.com/problems/find-peak-element/?envType=problem-list-v2&envId=vrww4tkr
+
+    static int findPeakElement(int[] arr) {
+        // int peak = 0; no needed
+        // int max = 0;
+        int start = 0;
+        int end = arr.length - 1;
+
+        while (start < end) {
+            int mid = start +(end-start)/2;
+
+            if (arr[mid]>arr[mid+1]) {
+                // This is the Desc part of the array
+                end = mid;
+            }else{      // (arr[mid]<arr[mid+1])
+                // This is the Asc part of the array
+                start = mid + 1;
+            }
+        }
+        return start; // or return end;
+    }
+
+    // ===================================================================================================
+
     public static void main(String[] args) {
-        char[] arr1 = { 'c', 'f', 'j' };
-        int[] arr = { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 25, 30, 44, 90 };
+        // char[] arr1 = { 'c', 'f', 'j' };
+        // int[] arr = { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 25, 30, 44, 90 };
         // Index----> 0, 1, 2, 3, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14
-        int[] arr2 = { 2, 4, 7, 7, 7, 7, 8, 8, 9 };
+        // int[] arr2 = { 2, 4, 7, 7, 7, 7, 8, 8, 9 };
+        int[] mountain = { 10, 12, 20, 22, 30, 19, 15, 9 };
 
         // System.out.println(ceilingNumber(arr, 19));
         // System.out.println(findPeakElement(arr, 91));
@@ -202,7 +228,7 @@ public class Binary_Search_LC {
         // System.out.println(Arrays.toString(searchRange(arr2, 7)));
         // System.out.println(leftMost(arr2, 7));
         // System.out.println(rightMost(arr2, 7));
-        System.out.println(myAns(arr, 90));
-
+        // System.out.println(myAns(arr, 44));
+        System.out.println(findPeakElement(mountain));
     }
 }
