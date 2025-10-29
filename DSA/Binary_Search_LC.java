@@ -214,28 +214,62 @@ public class Binary_Search_LC {
 
     // ===================================================================================================
     // Q) 1095--> Fiind in Mountain Array :-
+    // https://leetcode.com/problems/find-in-mountain-array/description/?envType=problem-list-v2&envId=vrww4tkr
+    // Note:- This is Brute Force Answer
 
-    static int findInMountainArray(int target, int[] arr) {
+    static int findInMountainArray(int[] arr, int target) {
+        int left = leftTargInMount(arr, target);
+        int right = rightTargInMount(arr, target);  
+
+        if (left != -1 && right != -1) {
+            return Math.min(left, right);
+        } else if (right != -1) {
+            return right;
+        } else {
+            return left;
+        }
+    }
+
+    static int leftTargInMount(int[] arr, int target) {
         int start = 0;
-        int end = arr.length;
+        int end = findPeakElement(arr);
         int ans = -1;
 
-        while (start < end) {
+        while (start <= end) {
             int mid = start + (end - start) / 2;
 
-            if (arr[mid] > arr[mid+1]) {
-                // Desc part
-                start = mid + 1;
-            } else if (arr[mid] < arr[mid+1]) {
-                end = mid;
-            } else { // target == arr[mid]
+            if (arr[mid] > target) {
+                end = mid - 1;
+            } else if (target == arr[mid]) {
                 ans = mid;
-
+                end = mid -1;   // go left for smaller index
+            } else {
+                start = mid + 1;
             }
         }
         return ans;
     }
 
+    static int rightTargInMount(int[] arr, int target) {
+        int ans = -1;
+        int peak = findPeakElement(arr);
+        int end = arr.length - 1;
+        while (peak <= end) {
+            int mid = peak + (end - peak) / 2;
+
+            if (arr[mid] > target) {
+                end = mid - 1;
+            } else if (target == arr[mid]) {
+                ans = mid;
+                end = mid -1;   // to find smallest index on right side
+            } else {
+                peak = mid + 1;
+            }
+        }
+        return ans;
+    }
+
+    // ==========================================================================================================
     public static void main(String[] args) {
         // char[] arr1 = { 'c', 'f', 'j' };
         // int[] arr = { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 25, 30, 44, 90 };
@@ -252,6 +286,6 @@ public class Binary_Search_LC {
         // System.out.println(rightMost(arr2, 7));
         // System.out.println(myAns(arr, 44));
         // System.out.println(findPeakElement(mountain));
-        System.out.println(findInMountainArray(22, mountain));
+        System.out.println(findInMountainArray(mountain, 20));
     }
 }
