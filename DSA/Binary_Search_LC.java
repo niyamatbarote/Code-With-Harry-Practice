@@ -199,12 +199,12 @@ public class Binary_Search_LC {
         int end = arr.length - 1;
 
         while (start < end) {
-            int mid = start +(end-start)/2;
+            int mid = start + (end - start) / 2;
 
-            if (arr[mid]>arr[mid+1]) {
+            if (arr[mid] > arr[mid + 1]) {
                 // This is the Desc part of the array
                 end = mid;
-            }else{      // (arr[mid]<arr[mid+1])
+            } else { // (arr[mid]<arr[mid+1])
                 // This is the Asc part of the array
                 start = mid + 1;
             }
@@ -213,6 +213,28 @@ public class Binary_Search_LC {
     }
 
     // ===================================================================================================
+    // Q) 1095--> Fiind in Mountain Array :-
+
+    static int findInMountainArray(int target, int[] arr) {
+        int start = 0;
+        int end = arr.length;
+        int ans = -1;
+
+        while (start < end) {
+            int mid = start + (end - start) / 2;
+
+            if (arr[mid] > arr[mid+1]) {
+                // Desc part
+                start = mid + 1;
+            } else if (arr[mid] < arr[mid+1]) {
+                end = mid;
+            } else { // target == arr[mid]
+                ans = mid;
+
+            }
+        }
+        return ans;
+    }
 
     public static void main(String[] args) {
         // char[] arr1 = { 'c', 'f', 'j' };
@@ -229,6 +251,7 @@ public class Binary_Search_LC {
         // System.out.println(leftMost(arr2, 7));
         // System.out.println(rightMost(arr2, 7));
         // System.out.println(myAns(arr, 44));
-        System.out.println(findPeakElement(mountain));
+        // System.out.println(findPeakElement(mountain));
+        System.out.println(findInMountainArray(22, mountain));
     }
 }
