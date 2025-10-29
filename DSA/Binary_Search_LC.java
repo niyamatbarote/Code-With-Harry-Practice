@@ -219,7 +219,7 @@ public class Binary_Search_LC {
 
     static int findInMountainArray(int[] arr, int target) {
         int left = leftTargInMount(arr, target);
-        int right = rightTargInMount(arr, target);  
+        int right = rightTargInMount(arr, target);
 
         if (left != -1 && right != -1) {
             return Math.min(left, right);
@@ -242,7 +242,7 @@ public class Binary_Search_LC {
                 end = mid - 1;
             } else if (target == arr[mid]) {
                 ans = mid;
-                end = mid -1;   // go left for smaller index
+                end = mid - 1; // go left for smaller index
             } else {
                 start = mid + 1;
             }
@@ -261,7 +261,7 @@ public class Binary_Search_LC {
                 end = mid - 1;
             } else if (target == arr[mid]) {
                 ans = mid;
-                end = mid -1;   // to find smallest index on right side
+                end = mid - 1; // to find smallest index on right side
             } else {
                 peak = mid + 1;
             }
@@ -286,6 +286,6 @@ public class Binary_Search_LC {
         // System.out.println(rightMost(arr2, 7));
         // System.out.println(myAns(arr, 44));
         // System.out.println(findPeakElement(mountain));
-        System.out.println(findInMountainArray(mountain, 20));
+        System.out.println(findInMountainArray(mountain, 9));
     }
 }
