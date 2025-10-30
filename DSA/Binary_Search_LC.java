@@ -272,14 +272,16 @@ public class Binary_Search_LC {
     // ==========================================================================================================
     // Q) 33 Find in Rotated Sorted Array:-
     // https://leetcode.com/problems/search-in-rotated-sorted-array/?envType=problem-list-v2&envId=vrww4tkr
+    // Its giving correct ANSWERS for duplicates in the array
     static int search(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
+        int ans = -1;
 
         while (start <= end) {
             int mid = start + (end - start) / 2;
             if (arr[mid] == target) {
-                return mid;
+                ans = mid;
             }
 
             if (arr[start] <= arr[mid]) { // left sorted check
@@ -296,7 +298,7 @@ public class Binary_Search_LC {
                 }
             }
         }
-        return -1;
+        return ans;
     }
 
     public static void main(String[] args) {
@@ -305,8 +307,7 @@ public class Binary_Search_LC {
         // Index----> 0, 1, 2, 3, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14
         // int[] arr2 = { 2, 4, 7, 7, 7, 7, 8, 8, 9 };
         // int[] mountain = { 10, 12, 20, 22, 30, 19, 15, 9, 5, 4, 2 };
-        int[] rotated = { 60, 70, 10, 20, 30, 40, 50};
-
+        int[] rotated = { 60, 60, 70, 10, 15, 17, 20, 20, 30, 40, 40, 50 };
 
         // System.out.println(ceilingNumber(arr, 19));
         // System.out.println(findPeakElement(arr, 91));
@@ -318,6 +319,6 @@ public class Binary_Search_LC {
         // System.out.println(myAns(arr, 44));
         // System.out.println(findPeakElement(mountain));
         // System.out.println(findInMountainArray(mountain, 9));
-        System.out.println(search(rotated, 40));
+        System.out.println(search(rotated, 20));
     }
 }
