@@ -317,28 +317,54 @@ public class Binary_Search_LC {
         return maxi;
     }
 
-    // =========================================================================================
     // Q) Find the Rotation count in Rotated Sorted Array :-
-    static int rotationCount1(int[] arr) {
+    // Optimized Answer (Using Binary Search) TC- O(logN)
+    static int rotationCountBS(int[] arr) {
         int start = 0;
-        int end = arr.length-1;
+        int end = arr.length - 1;
         int ans = -1;
 
-        while (start<=end) {
-            int mid = start+(end-start)/2;
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
 
-            if (arr[mid]>arr[mid+1]) {
-                mid = ans+1;
+            if (end > mid && arr[mid] > arr[mid + 1]) {
+                ans = mid + 1;
             }
-
-            if (arr[start]<arr[mid]) { // left Sorted Check
-                start = mid +1;
-            }else {
-                end = mid-1;
+            if (start < mid && arr[mid - 1] > arr[mid]) {
+                ans = mid;
             }
-            
+            if (arr[start] > arr[mid]) {
+                end = mid - 1;
+            } else {
+                start = mid + 1;
+            }
         }
         return ans;
+    }
+
+    // =========================================================================================
+    // Q) Find the PIVOT in Rotated Sorted Array :-
+    static int pivot(int[] arr) {
+        int start = 0;
+        int end = arr.length - 1;
+
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+
+            // 4 Cases Here:-
+            if (mid < end && arr[mid] > arr[mid + 1]) {
+                return mid;
+            }
+            if (start < mid && arr[mid - 1] > arr[mid]) {
+                return mid - 1;
+            }
+            if (arr[start] > arr[mid]) {
+                end = mid - 1;
+            } else {
+                start = mid + 1;
+            }
+        }
+        return -1;
     }
 
     public static void main(String[] args) {
@@ -348,7 +374,7 @@ public class Binary_Search_LC {
         // int[] arr2 = { 2, 4, 7, 7, 7, 7, 8, 8, 9 };
         // int[] mountain = { 10, 12, 20, 22, 30, 19, 15, 9, 5, 4, 2 };
         int[] rotated = { 60, 60, 70, 10, 15, 17, 20, 20, 30, 40, 40, 50 };
-        int[] rotated1 = { 60, 70, 80, 90, 10, 20, 30 };
+        int[] rotated1 = { 20, 20, 40, 50, 60, 70, 80, 90, 10 };
 
         // System.out.println(ceilingNumber(arr, 19));
         // System.out.println(findPeakElement(arr, 91));
@@ -362,6 +388,7 @@ public class Binary_Search_LC {
         // System.out.println(findInMountainArray(mountain, 9));
         // System.out.println(search(rotated, 20));
         System.out.println(rotationCount(rotated1));
-        System.out.println(rotationCount1(rotated1));
+        System.out.println(rotationCountBS(rotated1));
+        // System.out.println(pivot(rotated));
     }
 }
