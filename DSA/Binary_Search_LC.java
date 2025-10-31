@@ -388,7 +388,7 @@ public class Binary_Search_LC {
         // System.out.println(findInMountainArray(mountain, 9));
         // System.out.println(search(rotated, 20));
         System.out.println(rotationCount(rotated1));
-        System.out.println(rotationCountBS(rotated1));
+        System.out.println(rotationCountBS(rotated));
         // System.out.println(pivot(rotated));
     }
 }
