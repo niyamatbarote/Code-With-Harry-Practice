@@ -301,6 +301,46 @@ public class Binary_Search_LC {
         return ans;
     }
 
+    // Q) Find the Rotation count in Rotated Sorted Array :-
+    // Brute Force Answer (Using Linear Search)
+
+    static int rotationCount(int[] arr) {
+        int maxi = -1;
+        int max = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+                maxi = i + 1;
+            }
+        }
+        return maxi;
+    }
+
+    // =========================================================================================
+    // Q) Find the Rotation count in Rotated Sorted Array :-
+    static int rotationCount1(int[] arr) {
+        int start = 0;
+        int end = arr.length-1;
+        int ans = -1;
+
+        while (start<=end) {
+            int mid = start+(end-start)/2;
+
+            if (arr[mid]>arr[mid+1]) {
+                mid = ans+1;
+            }
+
+            if (arr[start]<arr[mid]) { // left Sorted Check
+                start = mid +1;
+            }else {
+                end = mid-1;
+            }
+            
+        }
+        return ans;
+    }
+
     public static void main(String[] args) {
         // char[] arr1 = { 'c', 'f', 'j' };
         // int[] arr = { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 25, 30, 44, 90 };
@@ -308,6 +348,7 @@ public class Binary_Search_LC {
         // int[] arr2 = { 2, 4, 7, 7, 7, 7, 8, 8, 9 };
         // int[] mountain = { 10, 12, 20, 22, 30, 19, 15, 9, 5, 4, 2 };
         int[] rotated = { 60, 60, 70, 10, 15, 17, 20, 20, 30, 40, 40, 50 };
+        int[] rotated1 = { 60, 70, 80, 90, 10, 20, 30 };
 
         // System.out.println(ceilingNumber(arr, 19));
         // System.out.println(findPeakElement(arr, 91));
@@ -319,6 +360,8 @@ public class Binary_Search_LC {
         // System.out.println(myAns(arr, 44));
         // System.out.println(findPeakElement(mountain));
         // System.out.println(findInMountainArray(mountain, 9));
-        System.out.println(search(rotated, 20));
+        // System.out.println(search(rotated, 20));
+        System.out.println(rotationCount(rotated1));
+        System.out.println(rotationCount1(rotated1));
     }
 }
