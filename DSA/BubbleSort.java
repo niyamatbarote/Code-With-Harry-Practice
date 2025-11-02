@@ -3,29 +3,28 @@ package DSA;
 import java.util.Arrays;
 
 public class BubbleSort {
-    static void swap(int[] arr, int el1, int el2) {
+    static int[] swap(int[] arr, int el1, int el2) {
         int temp = arr[el1];
         arr[el1] = arr[el2];
         arr[el2] = temp;
         // System.out.println(Arrays.toString(arr));
+        return arr;
     }
 
-    static void bubbleSort(int[] array) {
-        while (array[0]<array[array.length-1]) {
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 1; j < array.length-1; j++) {
-                if (array[i]>array[j]) {
-                    swap(array, i, j);
+    static int[] bubbleSort(int[] array) {
+            for (int i = 0; i < array.length; i++) {
+                for (int j = 1; j < array.length; j++) {
+                    if (array[j-1] > array[j]) {
+                        swap(array, j-1, j);
+                    }
                 }
             }
-        }
-    }
-        System.out.println(Arrays.toString(array));
+        return array;
     }
 
     public static void main(String[] args) {
-        int[] arr = { 3, 5, 2, 4, 1 };
+        int[] arr = { 15, 5, 3, 9, 12, 20, 1, 2 };
 
-        bubbleSort(arr);
+        System.out.println(Arrays.toString(bubbleSort(arr)));
     }
 }
