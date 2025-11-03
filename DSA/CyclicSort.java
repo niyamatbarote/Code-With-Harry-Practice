@@ -22,6 +22,7 @@ public class CyclicSort {
     // return arr;
     // }
 
+    // NOT FOR DUPLICATE VALUES
     static int[] cyclicSort(int[] arr) {
         int i = 0;
         while (i < arr.length) {
@@ -37,7 +38,7 @@ public class CyclicSort {
 
     public static void main(String[] args) {
         int[] arr = { 5, 6, 4, 7, 3, 8, 2, 9, 1 };
-        int[] array = { 3, 5, 2, 1, 4 };
+        int[] array = { 3, 5, 2, 1, 4, 4, 4 };
 
         System.out.println(Arrays.toString(cyclicSort(arr)));
         System.out.println(Arrays.toString(cyclicSort(array)));
