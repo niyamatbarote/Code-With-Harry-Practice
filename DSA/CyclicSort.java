@@ -11,19 +11,6 @@ public class CyclicSort {
         return arr;
     }
 
-    static int[] cyclicSort(int[] arr) {
-        int i = 0;
-        while (i < arr.length) {
-            int correct = arr[i] - 1;
-            if (arr[i] != arr[correct]) {
-                swap(arr, i, correct);
-            } else {
-                i++;
-            }
-        }
-        return arr;
-    }
-
     // WRONG METHOD OF Doing Cyclic Sort :-
     // static int[] cyclicSort(int[] arr) {
     // for (int i = 0; i < arr.length; i++) {
@@ -34,6 +21,19 @@ public class CyclicSort {
     // }
     // return arr;
     // }
+
+    static int[] cyclicSort(int[] arr) {
+        int i = 0;
+        while (i < arr.length) {
+            int corrcted = arr[i] - 1;
+            if (arr[i] != arr[corrcted]) {
+                swap(arr, i, corrcted);
+            }else{  
+                i++;
+            }
+        }
+        return arr;
+    }
 
     public static void main(String[] args) {
         int[] arr = { 5, 6, 4, 7, 3, 8, 2, 9, 1 };
