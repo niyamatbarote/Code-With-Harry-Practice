@@ -2,6 +2,7 @@ package DSA;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class CyclicSort_LC {
 
@@ -39,7 +40,7 @@ public class CyclicSort_LC {
     // https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/
     // Note:- if range --> [0,N] , then --> element will be at  index = element
     // if range --> [1,N], then --> element will be at index = element - 1
-    static List<Integer> findAllDuplicates(int[] arr) {
+    static List<Integer> findAllMissingNum(int[] arr) {
         int i= 0;
         while (i<arr.length) {
             int correct = arr[i]-1;
@@ -58,14 +59,14 @@ public class CyclicSort_LC {
         }
         return ans;
     }
-
-
+// ===============================================================================================
+// Amazon Interview Qusn(Lc Q) 287)
+// https://leetcode.com/problems/find-the-duplicate-number/
 
     public static void main(String[] args) {
         int[] arr = { 2, 0, 3, 4, 5, 6, 8, 1 };
         int[] array = {4,5,1,6,9,7,8};
-        List<Integer> dup = findAllDuplicates(array);
-        System.out.println(findAllDuplicates(array));
+        
         // System.out.println(findMissingNum(arr));
     }
 }
