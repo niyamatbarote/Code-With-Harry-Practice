@@ -22,7 +22,7 @@ public class CyclicSort_LC {
         while (i < arr.length) {
             int correct = arr[i];
             // (arr[i] < arr.length) this extra condition bcoz range[0,N]...... (Might Be)
-            if (arr[i] < arr.length && arr[i] != arr[correct]) {    
+            if (arr[i] < arr.length && arr[i] != arr[correct]) {
                 swap(arr, i, correct);
             } else {
                 i++;
@@ -85,7 +85,7 @@ public class CyclicSort_LC {
         return -1;
     }
 
-    // Microsoft Que (LC Q) 442)
+    // Microsoft & Microsoft Que (LC Q) 442)
     // https://leetcode.com/problems/find-all-duplicates-in-an-array/
     static List<Integer> findMultiDuplicates(int[] arr) {
         int i = 0;
@@ -107,13 +107,41 @@ public class CyclicSort_LC {
         return ans;
     }
 
+    // Set Mismatch (LC Q) 645)
+    // https://leetcode.com/problems/set-mismatch/
+    static int[] findErrorNums(int[] arr) {
+        int i = 0;
+        while (i < arr.length) {
+            int correct = arr[i] - 1;
+            if (arr[i] != arr[correct]) {
+                swap(arr, i, correct);
+            } else {
+                i++;
+            }
+        }
+        // to check the set mismatch
+        for (int j = 0; j < arr.length; j++) {
+            if (arr[j] != j + 1) {
+                return new int[] { arr[j]/* Duplicates */, j + 1/* Missing Element */ };
+            }
+        }
+        return new int[] { -1, -1 };
+    }
+
+    // Google Que (Hard) (LC Q) 41 ) Q) First Missing Positive
+    // https://leetcode.com/problems/first-missing-positive/
+    
+
+
     public static void main(String[] args) {
-        int[] arr = { 2, 0, 3, 4, 5, 6, 8, 1 };
-        int[] array = { 4, 5, 1, 6, 9, 7, 8 };
-        int[] duplicate = { 4, 5, 3, 2, 3, 1 };
+        // int[] arr = { 2, 0, 3, 4, 5, 6, 8, 1 };
+        // int[] array = { 4, 5, 1, 6, 9, 7, 8 };
+        // int[] duplicate = { 4, 5, 3, 2, 3, 1 };
+        int[] errorSet = { 1, 6, 4, 3, 3, 2 };
 
         // System.out.println(findMissingNum(arr));
         // System.out.println(findDuplicates(duplicate));
-        // System.out.println(findMultiDuplicates(duplicate)); 
+        // System.out.println(findMultiDuplicates(duplicate));
+        System.out.println(Arrays.toString(findErrorNums(errorSet)));
     }
 }
