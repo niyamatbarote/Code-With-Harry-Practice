@@ -132,24 +132,22 @@ public class CyclicSort_LC {
     // https://leetcode.com/problems/first-missing-positive/
     static int firstMissingPositive(int[] arr) {
         int i = 0;
-        while (i<arr.length) {
-            int correct = arr[i]-1 ;
-            if (arr[i]>0 && arr[i]<arr.length && arr[i] != arr[correct]) {
+        while (i < arr.length) {
+            int correct = arr[i] - 1;
+            if (arr[i] > 0 && arr[i] < arr.length && arr[i] != arr[correct]) {
                 swap(arr, i, correct);
-            }else{
+            } else {
                 i++;
             }
         }
         // First Missing Positive Condition
-        for (int j = 0; j<arr.length; j++) {
-            if (arr[j] != j+1) {
-                return j+1;
+        for (int j = 0; j < arr.length; j++) {
+            if (arr[j] != j + 1) {
+                return j + 1;
             }
         }
-        return arr.length-1;
+        return arr.length - 1;
     }
-
-
 
     public static void main(String[] args) {
         // int[] arr = { 2, 0, 3, 4, 5, 6, 8, 1 };
