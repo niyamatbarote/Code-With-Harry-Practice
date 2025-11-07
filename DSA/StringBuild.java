@@ -1,6 +1,7 @@
 package DSA;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class StringBuild {
     public static void main(String[] args) {
@@ -111,7 +112,20 @@ public class StringBuild {
 
         // String Methods
         String aa = "Niyamat Barote";
-        aa.hashCode();
+        System.out.println(aa.hashCode());
+        System.out.println(aa.charAt(5));
+        System.out.println(aa.codePointAt(0));
+        System.out.println(aa.contains(str));
+        System.out.println(aa.length());
+        System.out.println(aa.toUpperCase());
+        System.out.println(aa.toLowerCase());
+        System.out.println(aa.compareTo(str1));
+        System.out.println(aa.isBlank());
+        System.out.println(aa.isBlank());
+        System.out.println("        Hiiii      ".strip());
+        System.out.println(Arrays.toString(aa.split("")));
+        System.out.println(Arrays.toString(aa.split(" ")));
+        
 
     }
 }
