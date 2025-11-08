@@ -8,7 +8,7 @@ public class PalindromeString {
 
         System.out.println("Enter Your String: ");
         String str = sc.nextLine();
-
+        str=str.toLowerCase();  // check..
         int start = 0;
         int end = str.length() - 1;
         boolean isPalindrome = false;
