@@ -1,4 +1,5 @@
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.TimeZone;
 
 public class Gregorian {
@@ -28,6 +29,12 @@ public class Gregorian {
         System.out.println(TimeZone.getAvailableIDs()[1]);
         System.out.println(TimeZone.getAvailableIDs()[2]);
         System.out.println(TimeZone.getAvailableIDs()[88]);
+
+        GregorianCalendar g = new GregorianCalendar();
+        System.out.println(g.isLeapYear(2016));
+        System.out.println(g.isLeapYear(2014));
+        System.out.println(g.isLeapYear(2005));
+        System.out.println(g.getTimeInMillis());
 
     }
 }
