@@ -19,6 +19,11 @@ public class Maths {
         return unique;
     }
 
+    // Find the Nth Bit of a No.
+    public static int findNBit(int n, int i) {
+        return n & (1 << i - 1);
+    }
+
     public static void main(String[] args) {
 
         int arr[] = { 1, -2, 3, 4, -2, 1, 3 };
@@ -26,6 +31,7 @@ public class Maths {
         System.out.println(isOdd(55));
         System.out.println(isOdd(20));
         System.out.println(findUnique(arr));
-
+        System.out.println(findNBit(10,1));
+        
     }
 }
