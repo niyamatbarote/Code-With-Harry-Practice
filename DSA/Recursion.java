@@ -54,12 +54,12 @@ public class Recursion {
         System.out.println(factorial(4));
 
         // Here Due to Larger Nth value of fibonacci, the program got stuck in the tree
-        // computing the repititive calls, and it stuck bcoz of long and large tree
-        // components
+        // computing the repititive calls, and it stuck bcoz it re-evaluates the same
+        // thing again and again
         // System.out.println(fibonacci(50));
 
         // sol of BS:-
-        int target = 12 ;
+        int target = 12;
         int ans = binarySearch(arr, target, 0, arr.length - 1);
         System.out.println(ans);
 
