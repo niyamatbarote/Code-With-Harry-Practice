@@ -9,7 +9,7 @@ public class Maths {
     }
 
     // To Find The Unique Element from an Arrya, where all the other elements in
-    // that array are duplicates
+    // that array are duplicatess
     public static int findUnique(int[] arr) {
         int unique = 0;
 
