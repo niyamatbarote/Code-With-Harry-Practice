@@ -31,7 +31,7 @@ public class Maths {
         System.out.println(isOdd(55));
         System.out.println(isOdd(20));
         System.out.println(findUnique(arr));
-        System.out.println(findNBit(10,1));
-        
+        System.out.println(findNBit(10, 1));
+
     }
 }
