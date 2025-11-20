@@ -25,7 +25,7 @@ public class SelectionSort {
     static int[] selectionSort(int[] arr) {
 
         for (int i = 0; i < arr.length; i++) {
-            int lastIndex = arr.length - i - 1;
+            int lastIndex  arr.length - i - 1;
             int maxItemIndex = getMax(arr, 0, lastIndex);
             swap(arr, maxItemIndex, lastIndex);
         }
