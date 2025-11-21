@@ -11,6 +11,13 @@
   <name>maven_parent</name>
   <!-- FIXME change it to the project's websitee -->
   <url>http://www.example.com</url>
+  <packaging>pom</packaging>
+  <modules>
+    <module>child1</module>
+    <module>child2</module>
+  </modules>
+
+
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
