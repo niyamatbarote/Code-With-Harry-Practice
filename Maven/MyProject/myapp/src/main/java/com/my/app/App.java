@@ -1,7 +1,7 @@
 package com.my.app;
 
 /**
- * Hello world!...
+ * Hello world!... im in main repo
  *
  */
 public class App 
