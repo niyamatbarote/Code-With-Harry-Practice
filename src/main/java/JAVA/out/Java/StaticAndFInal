@@ -1,0 +1,15 @@
+// Final Keyword :- 
+//1) THe FInal Keyword is a Modifier Used For Variables , methods And classes, it means no change/overwrite
+// excess extension depending on where its applied
+//2) Final Variabel :- a varible is declared as final cant be reassigned once initialized
+//3) It must be initialised at the time of declaration or the in the Constructor
+//4) It is used to crate Constance commonly with static also
+
+public class StaticAndFinal{
+
+    public static void main(String[] args){
+        int a = 200;
+        a-100;
+        System.out.print(a);
+    }
+}
