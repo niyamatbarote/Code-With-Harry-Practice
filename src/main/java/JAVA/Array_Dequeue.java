@@ -25,7 +25,7 @@ public class Array_Dequeue {
         ad1.offerLast(76); // add to last
         System.out.println(ad1.peekFirst());    // note
         System.out.println(ad1.peek()); // peak element
-        System.out.println(ad1.peekLast()); // note
+        System.out.println(ad1.peekLast()); // note* 
         
 
     }
