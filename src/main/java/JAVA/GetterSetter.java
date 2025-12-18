@@ -3,11 +3,11 @@ class MyStudent32121 {
     private String name;
 
     public void setId(int a) {
-        id = a;
+        this.id = a;
     }
 
     public void setName(String str) {
-        name = str;
+        this.name = str;
     }
 
     public int getId() {
@@ -29,6 +29,8 @@ public class GetterSetter {
         // m2.name = "Niyamat";         //---> Throws Error due to private access modifiers 
         
         m1.setId(1);
+        m1.setName("Niyamat");
+        System.out.println(m1.getName());
         System.out.println(m1.getId());
     }
 }
