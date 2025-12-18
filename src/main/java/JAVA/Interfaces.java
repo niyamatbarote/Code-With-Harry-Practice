@@ -29,13 +29,13 @@ class MyCycle implements Bicycle, CycleHorn {
 
     public void applyBrakes(int Decrement) {
         System.out.println("Speed Decremented By : " + Decrement);
-        Speed = Speed - Decrement;
+        this.Speed = Speed - Decrement;
         System.out.println("Current Speed is : " + Speed);
     }
 
     public void speedUp(int Increment) {
         System.out.println("Speed is Incremented By : " + Increment);
-        Speed = Speed + Increment;
+        this.Speed = Speed + Increment;
         System.out.println("Current Speed is : " + Speed);
     }
 

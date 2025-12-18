@@ -40,6 +40,8 @@ public class Inheritance {
         derv.printMe();
         derv.printMeY();
         derv.setX(69);
+        bass.setX(33);
+        System.out.println(bass.getX());
         System.out.println(derv.getX());
     }
 }
