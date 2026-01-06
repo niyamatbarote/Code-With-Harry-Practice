@@ -31,6 +31,18 @@ abstract class Child3 extends Parentt {
     }
 }
 
+class Child4 extends Parentt {
+
+    public Child4() {
+        System.out.println("Im constructor of child 4");
+    }
+
+    public void greet(){
+        System.out.println("Good Night");
+    }
+
+}
+
 public class Abstraction {
     public static void main(String[] args) {
         // Note:- We Cannot Make Object of the abstract classes
@@ -39,7 +51,9 @@ public class Abstraction {
         // Parentt pt = new Parentt(); // -- Error
         Child1 c1 = new Child1();
         // Child3 c2 = new Child3(); // --Error
+        Child4 c4 = new Child4();
 
         c1.greet();
+        c4.greet();
     }
 }

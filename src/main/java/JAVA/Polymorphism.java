@@ -65,7 +65,10 @@ class MyNewSmartPhone extends Cellphone212 implements Messanger, Gps, cameraa {
 public class Polymorphism {
     public static void main(String[] args) {
         cameraa cmr = new MyNewSmartPhone();
+        Messanger msg = new MyNewSmartPhone();
 
+        msg.ReadMsg();
+        msg.WriteMsg();
         cmr.Record();   // --> Only Methods of Camera Will be Used And Functional Here
         cmr.takeSnap();
         // cmr.WriteMsg();  --> Throws Error Bcoz Camera Methods is Used

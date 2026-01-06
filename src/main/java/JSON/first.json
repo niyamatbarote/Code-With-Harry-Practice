@@ -1,0 +1,15 @@
+
+{
+    "name":"Niyamat",
+    "age": 21,
+    "isYoung": true,
+    "Year": 3.5,
+    "College": "Alard College of Engineering & Management",
+    "Licence": null,
+    "Best Friends": ["Mahemud", "Pranav", "Rehan", "Ismail", "Juned"],
+    "Semwise Pointer": [7.5,7.6,8.4,8.6,8.9],
+    "MySkills" : {
+        "Sports": ["Cricket", "Football", "Volleyball"],
+        "Technical Skills": ["Maven", "Hibernate", "Orm", "Java"]
+    }
+}
